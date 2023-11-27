@@ -9,7 +9,7 @@ import testimonial2 from "../assets/testimonial-2.jpg";
 import testimonial3 from "../assets/testimonial-3.jpg";
 import facebook from "../assets/facebook.svg";
 import twitter from "../assets/twitter.svg";
-import linkedIn from "../assets/linkedIn.svg";
+import linkedIn from "../assets/linkedin.svg";
 
 const Homepage = () => {
   const style = {
