@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* setting custom style here */
+.outlet {
+  width: calc(100% - 300px);
+  padding: 24px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.hero {
+  height: calc(100vh - 96px);
+  width: 100%;
+  background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)),
+    url("./assets/background.jpg");
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+body {
+  background: #0d5c6312;
+}
