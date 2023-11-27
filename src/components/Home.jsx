@@ -79,12 +79,15 @@ const Home = () => {
     setPlantSeason({
       season: "",
       temperature: "",
+      humidity: "",
+      ph_level: "",
+      water: "",
     });
   };
 
   const handlePlant = (e) => {
     const { name, value } = e.target;
-    setHarvestSeason({
+    setPlantSeason({
       ...plantSeason,
       [name]: value,
     });
@@ -94,15 +97,17 @@ const Home = () => {
     e.preventDefault();
     console.log(harvestSeason);
     setHarvestSeason({
-      season: "",
       temperature: "",
+      humidity: "",
+      ph_level: "",
+      water: "",
     });
   };
 
   const handleHarvest = (e) => {
     const { name, value } = e.target;
-    setPlantSeason({
-      ...plantSeason,
+    setHarvestSeason({
+      ...harvestSeason,
       [name]: value,
     });
   };
@@ -115,7 +120,7 @@ const Home = () => {
           <input
             type="text"
             placeholder="Search.."
-            className="w-full bg-[transparent]"
+            className="w-full bg-[transparent] outline-none"
           />
         </div>
         <div className="flex gap-4 items-center justify-center">
@@ -200,13 +205,14 @@ const Home = () => {
           {active === "planting" && (
             <form className="bg-white p-8 rounded-3xl shadow-lg mt-8 w-5/6">
               <div>
-                <label htmlFor="name">Season</label>
+                <label>Season</label>
                 <select
                   name="season"
                   value={plantSeason.season}
                   onChange={handlePlant}
                   className={style.input}
                 >
+                  <option value="">Select Season</option>
                   <option value="rainy">Rainy</option>
                   <option value="summer">Summer</option>
                   <option value="winter">Winter</option>
@@ -214,7 +220,7 @@ const Home = () => {
                 </select>
               </div>
               <div>
-                <label htmlFor="name">Temperature</label>
+                <label>Temperature</label>
                 <input
                   type="text"
                   placeholder=""
@@ -225,7 +231,7 @@ const Home = () => {
                 />
               </div>
               <div>
-                <label htmlFor="name">Humidity</label>
+                <label>Humidity</label>
                 <input
                   type="text"
                   placeholder=""
@@ -236,26 +242,28 @@ const Home = () => {
                 />
               </div>
               <div>
-                <label htmlFor="name">PH Level</label>
+                <label>PH Level</label>
                 <select
                   name="ph_level"
                   value={plantSeason.ph_level}
                   onChange={handlePlant}
                   className={style.input}
                 >
+                  <option value="">Select PH level</option>
                   <option value="acidic">Acidic</option>
                   <option value="alkaline">Alkaline</option>
                   <option value="neutral">Neutral</option>
                 </select>
               </div>
               <div>
-                <label htmlFor="name">Water Availability</label>
+                <label>Water Availability</label>
                 <select
                   name="water"
                   value={plantSeason.water}
                   onChange={handlePlant}
                   className={style.input}
                 >
+                  <option value="">Select Water Availability</option>
                   <option value="low">Low</option>
                   <option value="high">High</option>
                 </select>
@@ -272,48 +280,50 @@ const Home = () => {
           {active === "harvest" && (
             <form className="bg-white p-8 rounded-3xl shadow-lg mt-8 w-5/6">
               <div>
-                <label htmlFor="name">Temperature</label>
+                <label>Temperature</label>
                 <input
                   type="text"
                   placeholder=""
                   name="temperature"
-                  value={plantSeason.temperature}
+                  value={harvestSeason.temperature}
                   onChange={handleHarvest}
                   className={style.input}
                 />
               </div>
               <div>
-                <label htmlFor="name">Humidity</label>
+                <label>Humidity</label>
                 <input
                   type="text"
                   placeholder=""
                   name="humidity"
-                  value={plantSeason.humidity}
+                  value={harvestSeason.humidity}
                   onChange={handleHarvest}
                   className={style.input}
                 />
               </div>
               <div>
-                <label htmlFor="name">PH Level</label>
+                <label>PH Level</label>
                 <select
                   name="ph_level"
-                  value={plantSeason.ph_level}
+                  value={harvestSeason.ph_level}
                   onChange={handleHarvest}
                   className={style.input}
                 >
+                  <option value="">Select PH level</option>
                   <option value="acidic">Acidic</option>
                   <option value="alkaline">Alkaline</option>
                   <option value="neutral">Neutral</option>
                 </select>
               </div>
               <div>
-                <label htmlFor="name">Water Availability</label>
+                <label>Water Availability</label>
                 <select
                   name="water"
-                  value={plantSeason.water}
+                  value={harvestSeason.water}
                   onChange={handleHarvest}
                   className={style.input}
                 >
+                  <option value="">Select Water Availability</option>
                   <option value="low">Low</option>
                   <option value="high">High</option>
                 </select>

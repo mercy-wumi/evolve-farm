@@ -11,6 +11,46 @@ import facebook from "../assets/facebook.svg";
 import twitter from "../assets/twitter.svg";
 import linkedIn from "../assets/linkedin.svg";
 
+// dummy data for why-choose-us and testimonial
+
+const whychooseevovle = [
+  {
+    img: whychooseus1,
+    heading: "Farmers' Ally",
+    sub: "Farmers are the backbone of our world, and we're here to be your ally. Our user-friendly interface is designed to make your life easier. No more second-guessing, just intuitive insights that guide you towards success",
+  },
+  {
+    img: whychooseus2,
+    heading: "Yield-Boosting Magic",
+    sub: "Unleash the magic of precision farming! Say goodbye to average yields and hello to bumper crops. Our solution helps you tap into the full potential of your land by optimizing planting and harvesting schedules",
+  },
+  {
+    img: whychooseus3,
+    heading: "Dynamic Predictions",
+    sub: "Our solution is your farming companion. Dynamic predictions powered by AI analyze a series of factors, ensuring you plant and harvest when the conditions are just right",
+  },
+];
+
+const testimonialList = [
+  {
+    img: testimonial1,
+    name: "Tosin Adeyeyi",
+    comment:
+      "I've been farming for years, and tech isn't really my thing. But Evolve changed the game for me. It's so easy to use - no tech headaches. Now, I know the best times to plant and harvest without any fuss. My yields are up, and I feel more in control. It's like having a friendly farming expert by my side. If I can use it, anyone can. It's made my farm better, simple as that!",
+  },
+  {
+    img: testimonial2,
+    name: "Bashir Musa",
+    comment:
+      "I've been farming for years, and tech isn't really my thing. But Evolve changed the game for me. It's so easy to use - no tech headaches. Now, I know the best times to plant and harvest without any fuss. My yields are up, and I feel more in control. It's like having a friendly farming expert by my side. If I can use it, anyone can. It's made my farm better, simple as that!",
+  },
+  {
+    img: testimonial3,
+    name: "Fatai Owolabi",
+    comment:
+      "I've been farming for over two decades, and I've never seen anything like Evolve. It's like having a personal farming advisor that understands my fields, the weather, and the soil. Since I started using this solution, my yields have consistently exceeded expectations. It's a game-changer for any farmer serious about maximizing their harvests.",
+  },
+];
 const Homepage = () => {
   const style = {
     list: "hover:border-b-2 border-primary",
@@ -93,43 +133,18 @@ const Homepage = () => {
           Why Choose Us
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 px-4 md:px-8 xl:px-24">
-          <div className="flex flex-col rounded-xl text-center shadow-lg hover:shadow-2xl bg-white z-20">
-            <img src={whychooseus1} alt="why choose us" />
-            <div className="p-6">
-              <span className="text-xl font-semibold">Farmers' Ally</span>
-              <p className="mt-2 text-sm">
-                Farmers are the backbone of our world, and we're here to be your
-                ally. Our user-friendly interface is designed to make your life
-                easier. No more second-guessing, just intuitive insights that
-                guide you towards success
-              </p>
+          {whychooseevovle.map((why, id) => (
+            <div
+              className="flex flex-col rounded-xl text-center shadow-lg hover:shadow-2xl bg-white z-20"
+              key={id}
+            >
+              <img src={why.img} alt="why choose us" />
+              <div className="p-6">
+                <span className="text-xl font-semibold">{why.heading}</span>
+                <p className="mt-2 text-sm">{why.sub}</p>
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col rounded-xl text-center shadow-lg hover:shadow-2xl bg-white z-20">
-            <img src={whychooseus2} alt="why choose us" />
-            <div className="p-6">
-              <span className="text-xl font-semibold">
-                Yield-Boosting Magic
-              </span>
-              <p className="mt-2 text-sm">
-                Unleash the magic of precision farming! Say goodbye to average
-                yields and hello to bumper crops. Our solution helps you tap
-                into the full potential of your land by optimizing planting and
-                harvesting schedules
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col rounded-xl text-center shadow-lg hover:shadow-2xl bg-white z-20">
-            <img src={whychooseus3} alt="why choose us" />
-            <div className="p-6">
-              <span className="text-xl font-semibold">Dynamic Predictions</span>
-              <p className="mt-2 text-sm">
-                Our solution is your farming companion. Dynamic predictions
-                powered by AI analyze a series of factors, ensuring you plant
-                and harvest when the conditions are just right
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
         <div className="bg-primary h-72 w-full opacity-20 absolute top-72"></div>
       </section>
@@ -144,53 +159,25 @@ const Homepage = () => {
           What other farmers are saying about us
         </span>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 my-8">
-          <div className="bg-white px-4 py-8 rounded-2xl flex flex-col justify-between gap-4">
-            <div className="flex gap-4 items-center mb-2">
-              <img src={testimonial1} alt="testimonial" />
-              <span className="font-semibold text-primary">Tosin Adeyeyi</span>
+          {testimonialList.map((testimony, id) => (
+            <div
+              className="bg-white px-4 py-8 rounded-2xl flex flex-col justify-between gap-4"
+              key={id}
+            >
+              <div className="flex gap-4 items-center mb-2">
+                <img src={testimony.img} alt="testimonial" />
+                <span className="font-semibold text-primary">
+                  {testimony.name}
+                </span>
+              </div>
+              <p className="text-sm">{testimony.comment}</p>
             </div>
-            <p className="text-sm">
-              "I've been farming for years, and tech isn't really my thing. But
-              Evolve changed the game for me. It's so easy to use - no tech
-              headaches. Now, I know the best times to plant and harvest without
-              any fuss. My yields are up, and I feel more in control. It's like
-              having a friendly farming expert by my side. If I can use it,
-              anyone can. It's made my farm better, simple as that!"
-            </p>
-          </div>
-          <div className="bg-white px-4 py-8 rounded-2xl flex flex-col justify-between gap-4">
-            <div className="flex gap-4 items-center mb-2">
-              <img src={testimonial2} alt="testimonial" />
-              <span className="font-semibold text-primary">Bashir Musa</span>
-            </div>
-            <p className="text-sm">
-              "I've been farming for years, and tech isn't really my thing. But
-              Evolve changed the game for me. It's so easy to use - no tech
-              headaches. Now, I know the best times to plant and harvest without
-              any fuss. My yields are up, and I feel more in control. It's like
-              having a friendly farming expert by my side. If I can use it,
-              anyone can. It's made my farm better, simple as that!"
-            </p>
-          </div>
-          <div className="bg-white px-4 py-8 rounded-2xl flex flex-col justify-between gap-4">
-            <div className="flex gap-4 items-center mb-2">
-              <img src={testimonial3} alt="testimonial" />
-              <span className="font-semibold text-primary">Fatai Owolabi</span>
-            </div>
-            <p className="text-sm">
-              "I've been farming for over two decades, and I've never seen
-              anything like Evolve. It's like having a personal farming advisor
-              that understands my fields, the weather, and the soil. Since I
-              started using this solution, my yields have consistently exceeded
-              expectations. It's a game-changer for any farmer serious about
-              maximizing their harvests."
-            </p>
-          </div>
+          ))}
         </div>
       </section>
       <footer className="px-4 md:px-8 xl:px-24 py-8 bg-primary text-white flex flex-col">
         <div className="md:flex items-center justify-between gap-4">
-          <div className="lg:w-1/2">
+          <div className="md:w-1/2">
             <Link to="/">
               <p className="text-4xl font-bold text-white mb-4">Evolve Farm</p>
             </Link>
@@ -200,11 +187,11 @@ const Homepage = () => {
               designed to elevate your farming experience
             </p>
           </div>
-          <div className="flex flex-col text-sm mt-4">
+          <div className="flex flex-col gap-1 text-sm mt-4">
             <span>Phone: +234 8100453289</span>
             <span>Email: info@Evolve.com</span>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 mt-4">
             <img src={facebook} alt="facebook" />
             <img src={twitter} alt="twitter" />
             <img src={linkedIn} alt="linkedIn" />

@@ -45,7 +45,7 @@ const SignUp = () => {
           <p className="text-2xl text-center">Login</p>
           <form>
             <div>
-              <label htmlFor="name">Email Address</label>
+              <label>Email Address</label>
               <input
                 type="email"
                 placeholder="shakira@mail.com"
@@ -56,7 +56,7 @@ const SignUp = () => {
               />
             </div>
             <div>
-              <label htmlFor="name">Password</label>
+              <label>Password</label>
               <input
                 type="password"
                 placeholder=""
