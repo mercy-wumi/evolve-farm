@@ -45,7 +45,7 @@ const datas = [
 
 const Home = () => {
   const style = {
-    row: `py-4 pl-6 md:pl-8 text-left font-medium`,
+    row: `py-3 pl-6 md:pl-8 text-left font-medium`,
     activeTab: "bg-primary text-white py-4 px-8 rounded-xl",
     inactiveTab:
       "border-primary border-[1px] text-primary py-4 px-8 rounded-xl",
@@ -110,7 +110,7 @@ const Home = () => {
     <div className="w-full">
       <nav className="flex justify-between items-center w-full">
         <span className="text-3xl text-primary">Welcome Shakira!</span>
-        <div className="p-[6px] rounded-lg border-primary border-[1px] flex items-center w-[400px] gap-2">
+        <div className="p-[6px] rounded-lg border-primary border-[1px] flex items-center w-[300px] gap-2">
           <img src={search} alt="search" />
           <input
             type="text"
@@ -124,7 +124,7 @@ const Home = () => {
           <img src={user} alt="user profile" />
         </div>
       </nav>
-      <div className="grid grid-cols-4 gap-24 my-8 font-semibold">
+      <div className="grid gap-4 grid-cols-2 xl:grid-cols-4 my-8 font-semibold">
         <div className="rounded-lg p-8 border-2 border-primary bg-[#0d5267] text-white">
           <p className="text-4xl">212</p>
           <span className="text-sm">Total Computaions</span>
@@ -142,8 +142,8 @@ const Home = () => {
           <span className="text-sm">Incorrect Computaions</span>
         </div>
       </div>
-      <div className="flex gap-16">
-        <div className="w-1/2">
+      <div className="xl:flex gap-16">
+        <div className="xl:w-1/2">
           <h3 className="text-3xl font-semibold">My Computations</h3>
           <div className="rounded-xl">
             <table className="w-full">
@@ -175,7 +175,7 @@ const Home = () => {
             </table>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="xl:w-1/2">
           <p className="font-semibold">
             Check the best time to plant and harvest your crops below
           </p>

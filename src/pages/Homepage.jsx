@@ -7,6 +7,9 @@ import whychooseus3 from "../assets/why-choose-3.png";
 import testimonial1 from "../assets/testimonial-1.jpg";
 import testimonial2 from "../assets/testimonial-2.jpg";
 import testimonial3 from "../assets/testimonial-3.jpg";
+import facebook from "../assets/facebook.svg";
+import twitter from "../assets/twitter.svg";
+import linkedIn from "../assets/linkedIn.svg";
 
 const Homepage = () => {
   const style = {
@@ -94,7 +97,7 @@ const Homepage = () => {
             <img src={whychooseus1} alt="why choose us" />
             <div className="p-6">
               <span className="text-xl font-semibold">Farmers' Ally</span>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 Farmers are the backbone of our world, and we're here to be your
                 ally. Our user-friendly interface is designed to make your life
                 easier. No more second-guessing, just intuitive insights that
@@ -108,7 +111,7 @@ const Homepage = () => {
               <span className="text-xl font-semibold">
                 Yield-Boosting Magic
               </span>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 Unleash the magic of precision farming! Say goodbye to average
                 yields and hello to bumper crops. Our solution helps you tap
                 into the full potential of your land by optimizing planting and
@@ -120,7 +123,7 @@ const Homepage = () => {
             <img src={whychooseus3} alt="why choose us" />
             <div className="p-6">
               <span className="text-xl font-semibold">Dynamic Predictions</span>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 Our solution is your farming companion. Dynamic predictions
                 powered by AI analyze a series of factors, ensuring you plant
                 and harvest when the conditions are just right
@@ -141,12 +144,12 @@ const Homepage = () => {
           What other farmers are saying about us
         </span>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 my-8">
-          <div className="bg-white p-4 rounded-lg">
+          <div className="bg-white px-4 py-8 rounded-2xl flex flex-col justify-between gap-4">
             <div className="flex gap-4 items-center mb-2">
               <img src={testimonial1} alt="testimonial" />
-              <span className="font-semibold">Tosin Adeyeyi</span>
+              <span className="font-semibold text-primary">Tosin Adeyeyi</span>
             </div>
-            <p>
+            <p className="text-sm">
               "I've been farming for years, and tech isn't really my thing. But
               Evolve changed the game for me. It's so easy to use - no tech
               headaches. Now, I know the best times to plant and harvest without
@@ -155,12 +158,12 @@ const Homepage = () => {
               anyone can. It's made my farm better, simple as that!"
             </p>
           </div>
-          <div className="bg-white p-4 rounded-lg">
+          <div className="bg-white px-4 py-8 rounded-2xl flex flex-col justify-between gap-4">
             <div className="flex gap-4 items-center mb-2">
               <img src={testimonial2} alt="testimonial" />
-              <span className="font-semibold">Bashir Musa</span>
+              <span className="font-semibold text-primary">Bashir Musa</span>
             </div>
-            <p>
+            <p className="text-sm">
               "I've been farming for years, and tech isn't really my thing. But
               Evolve changed the game for me. It's so easy to use - no tech
               headaches. Now, I know the best times to plant and harvest without
@@ -169,12 +172,12 @@ const Homepage = () => {
               anyone can. It's made my farm better, simple as that!"
             </p>
           </div>
-          <div className="bg-white p-4 rounded-lg">
+          <div className="bg-white px-4 py-8 rounded-2xl flex flex-col justify-between gap-4">
             <div className="flex gap-4 items-center mb-2">
               <img src={testimonial3} alt="testimonial" />
-              <span className="font-semibold">Fatai Owolabi</span>
+              <span className="font-semibold text-primary">Fatai Owolabi</span>
             </div>
-            <p>
+            <p className="text-sm">
               "I've been farming for over two decades, and I've never seen
               anything like Evolve. It's like having a personal farming advisor
               that understands my fields, the weather, and the soil. Since I
@@ -185,18 +188,29 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <footer className="px-4 md:px-8 xl:px-24 py-12 bg-primary text-white md:flex items-center justify-between">
-        <div className="flex-1">
-          <Link to="/">
-            <p className="text-4xl font-bold text-white mb-4">Evolve Farm</p>
-          </Link>
-          <p>
-            Empower your farm with our precision farming solution. From expert
-            planting guidance to innovative harvest planning, our tools are
-            designed to elevate your farming experience
-          </p>
+      <footer className="px-4 md:px-8 xl:px-24 py-8 bg-primary text-white flex flex-col">
+        <div className="md:flex items-center justify-between gap-4">
+          <div className="lg:w-1/2">
+            <Link to="/">
+              <p className="text-4xl font-bold text-white mb-4">Evolve Farm</p>
+            </Link>
+            <p className="lg:w-3/4 text-sm">
+              Empower your farm with our precision farming solution. From expert
+              planting guidance to innovative harvest planning, our tools are
+              designed to elevate your farming experience
+            </p>
+          </div>
+          <div className="flex flex-col text-sm mt-4">
+            <span>Phone: +234 8100453289</span>
+            <span>Email: info@Evolve.com</span>
+          </div>
+          <div className="flex gap-4">
+            <img src={facebook} alt="facebook" />
+            <img src={twitter} alt="twitter" />
+            <img src={linkedIn} alt="linkedIn" />
+          </div>
         </div>
-        <p className="flex-1 flex justify-end">&#169;Evolve farm 2023</p>
+        <p className="mt-8 text-center">&#169;Evolve farm 2023</p>
       </footer>
     </div>
   );
