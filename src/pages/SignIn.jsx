@@ -44,7 +44,7 @@ const SignUp = () => {
           </Link>
           <p className="text-2xl text-center">Login</p>
           <form>
-            <div>
+            <div className="mb-4">
               <label>Email Address</label>
               <input
                 type="email"
@@ -55,7 +55,7 @@ const SignUp = () => {
                 className={style.input}
               />
             </div>
-            <div>
+            <div className="mb-4">
               <label>Password</label>
               <input
                 type="password"

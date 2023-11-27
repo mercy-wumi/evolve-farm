@@ -50,7 +50,7 @@ const SignUp = () => {
           </Link>
           <p className="text-2xl text-center">Create Account</p>
           <form>
-            <div>
+            <div className="mb-4">
               <label htmlFor="name">Full Name</label>
               <input
                 id="name"
@@ -62,7 +62,7 @@ const SignUp = () => {
                 className={style.input}
               />
             </div>
-            <div>
+            <div className="mb-4">
               <label htmlFor="name">Email Address</label>
               <input
                 type="email"
@@ -73,7 +73,7 @@ const SignUp = () => {
                 className={style.input}
               />
             </div>
-            <div>
+            <div className="mb-4">
               <label htmlFor="name">Phone Number</label>
               <input
                 type="number"
@@ -84,7 +84,7 @@ const SignUp = () => {
                 className={style.input}
               />
             </div>
-            <div>
+            <div className="mb-4">
               <label htmlFor="name">Password</label>
               <input
                 type="password"
@@ -95,7 +95,7 @@ const SignUp = () => {
                 className={style.input}
               />
             </div>
-            <div>
+            <div className="mb-4">
               <label htmlFor="name">Confirm Password</label>
               <input
                 type="password"
