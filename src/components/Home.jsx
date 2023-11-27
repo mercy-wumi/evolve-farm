@@ -132,19 +132,19 @@ const Home = () => {
       <div className="grid gap-4 grid-cols-2 xl:grid-cols-4 my-8 font-semibold">
         <div className="rounded-lg p-8 border-2 border-primary bg-[#0d5267] text-white">
           <p className="text-4xl">212</p>
-          <span className="text-sm">Total Computaions</span>
+          <span className="text-sm">Total Computations</span>
         </div>
         <div className="rounded-lg p-8 border-2 border-primary">
           <p className="text-4xl">189</p>
-          <span className="text-sm">Planting Computaions</span>
+          <span className="text-sm">Planting Computations</span>
         </div>
         <div className="rounded-lg p-8 border-2 border-primary">
           <p className="text-4xl">19</p>
-          <span className="text-sm">Harvest Computaions</span>
+          <span className="text-sm">Harvest Computations</span>
         </div>
         <div className="rounded-lg p-8 border-2 border-primary">
           <p className="text-4xl">5</p>
-          <span className="text-sm">Incorrect Computaions</span>
+          <span className="text-sm">Incorrect Computations</span>
         </div>
       </div>
       <div className="xl:flex gap-16">

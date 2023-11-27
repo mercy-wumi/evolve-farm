@@ -189,7 +189,7 @@ const Homepage = () => {
           </div>
           <div className="flex flex-col gap-1 text-sm mt-4">
             <span>Phone: +234 8100453289</span>
-            <span>Email: info@Evolve.com</span>
+            <span>Email: info@evolve.com</span>
           </div>
           <div className="flex gap-4 mt-4">
             <img src={facebook} alt="facebook" />
