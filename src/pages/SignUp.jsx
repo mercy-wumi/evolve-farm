@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { url } from "../baseUrl";
+import axios from "axios";
 
 import farmland from "../assets/farmland.svg";
 
@@ -14,14 +16,26 @@ const SignUp = () => {
 
   const handleCreateAcc = (e) => {
     e.preventDefault();
-    console.log(farmerSignup);
-    setFarmerSignup({
-      name: "",
-      email: "",
-      phone_number: "",
-      password: "",
-      confirm_password: "",
-    });
+
+    axios({
+      url: `${url}/api/dj-rest-auth/registration`,
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(farmerSignup),
+    })
+      .then((resp) => {
+        console.log(resp);
+        setFarmerSignup({
+          name: "",
+          email: "",
+          phone_number: "",
+          password: "",
+          confirm_password: "",
+        });
+      })
+      .catch((err) => console.log(err));
   };
 
   const style = {
